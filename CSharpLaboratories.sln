@@ -25,19 +25,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{BC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{D784DD65-36D8-4D49-A77E-42BD3F46047D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocks", "FirstLaboratory\Domain\Rocks\Rocks.csproj", "{42A55369-EE69-431D-9613-7813B13E61B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocks", "FirstLaboratory\Domain\Rocks\Rocks.csproj", "{42A55369-EE69-431D-9613-7813B13E61B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jewel", "FirstLaboratory\Services\Jewel\Jewel.csproj", "{BB75FCB9-F3FA-4E14-B5D4-3AF5A688A939}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jewel", "FirstLaboratory\Services\Jewel\Jewel.csproj", "{BB75FCB9-F3FA-4E14-B5D4-3AF5A688A939}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyClasses", "SecondLaboratory\Services\MyClasses\MyClasses.csproj", "{A5DE6578-DE7E-440E-9B76-9FD10804C027}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyClasses", "SecondLaboratory\Services\MyClasses\MyClasses.csproj", "{A5DE6578-DE7E-440E-9B76-9FD10804C027}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "ThirdLaboratory\Domain\InterfacesAndAbstractClasses\Data.csproj", "{57FA40BC-BC94-4F4D-8AAB-28A64C44069C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "ThirdLaboratory\Domain\InterfacesAndAbstractClasses\Data.csproj", "{57FA40BC-BC94-4F4D-8AAB-28A64C44069C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "ThirdLaboratory\Domain\Messages\Messages.csproj", "{2EA4AA79-F497-413A-9C3C-E51017E8B18F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messages", "ThirdLaboratory\Domain\Messages\Messages.csproj", "{2EA4AA79-F497-413A-9C3C-E51017E8B18F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phones", "ThirdLaboratory\Services\Phones\Phones.csproj", "{8851ED7F-90C9-4080-B220-44873F7614BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phones", "ThirdLaboratory\Services\Phones\Phones.csproj", "{8851ED7F-90C9-4080-B220-44873F7614BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FourthLaboratory", "FourthLaboratory", "{0EEC6264-7C8E-43FD-B23C-8E1312EB486C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{F3AF80A1-1519-47BE-8133-A7A3AEB05023}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,12 +71,13 @@ Global
 		{8851ED7F-90C9-4080-B220-44873F7614BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8851ED7F-90C9-4080-B220-44873F7614BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8851ED7F-90C9-4080-B220-44873F7614BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3AF80A1-1519-47BE-8133-A7A3AEB05023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3AF80A1-1519-47BE-8133-A7A3AEB05023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3AF80A1-1519-47BE-8133-A7A3AEB05023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3AF80A1-1519-47BE-8133-A7A3AEB05023}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {252104BE-0FC7-41F1-A696-769D6437B796}
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{663D10CD-8C21-4476-B8A9-8A19B9B729D2} = {A96BFA10-E628-4E86-8A1B-9A1D755ECF1C}
@@ -91,5 +94,9 @@ Global
 		{57FA40BC-BC94-4F4D-8AAB-28A64C44069C} = {36066F72-3B75-452A-80C4-04F0BB7AAA36}
 		{2EA4AA79-F497-413A-9C3C-E51017E8B18F} = {36066F72-3B75-452A-80C4-04F0BB7AAA36}
 		{8851ED7F-90C9-4080-B220-44873F7614BE} = {BC8AFB48-7D74-4577-B598-5172EF6E8F24}
+		{F3AF80A1-1519-47BE-8133-A7A3AEB05023} = {3C7AEE80-A249-4E06-B909-8579105C21CE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {252104BE-0FC7-41F1-A696-769D6437B796}
 	EndGlobalSection
 EndGlobal

@@ -4,23 +4,23 @@ using System.Collections.Generic;
 using FirstLaboratory.Domain.Rocks;
 using FirstLaboratory.Services.Jewel.Interfaces;
 
-namespace FirstLaba.Services.Jewel
+namespace FirstLaboratory.Services.Jewel
 {
     public class Necklace : IJewelry
     {
-        List<Stone> _stones;
+        public List<Stone> Stones { get; private set; }
         public Necklace(List<Stone> stones)
         {
-            _stones = new List<Stone>(stones);
+            Stones = new List<Stone>(stones);
         }
 
-        public double calculateTotalPrice() => _stones.Sum(s => s.Price);
+        public double calculateTotalPrice() => Stones.Sum(s => s.Price);
 
-        public double calculateTotalWeight() => _stones.Sum(s => s.Weight);
+        public double calculateTotalWeight() => Stones.Sum(s => s.Weight);
 
         public IEnumerable<Stone> getStonesByTransparency(int min, int max)
-            => _stones.Where(s => s.Transparency <= max && s.Transparency >= min);
+            => Stones.Where(s => s.Transparency <= max && s.Transparency >= min);
 
-        public void sortStones() => _stones.OrderBy(s => s.Price);
+        public void sortStones() => Stones.OrderBy(s => s.Price);
     }
 }

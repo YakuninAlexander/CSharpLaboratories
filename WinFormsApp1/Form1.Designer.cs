@@ -35,6 +35,7 @@ namespace WinFormsApp1
             this.getForTransparency = new System.Windows.Forms.Button();
             this.necklaceDisplay_txb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.info = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // getNecklace_btn
@@ -99,11 +100,23 @@ namespace WinFormsApp1
             this.label1.TabIndex = 5;
             this.label1.Text = "Ваше ожерелье";
             // 
+            // info
+            // 
+            this.info.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.info.Location = new System.Drawing.Point(217, 142);
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(129, 47);
+            this.info.TabIndex = 6;
+            this.info.Text = "Информация о камнях";
+            this.info.UseVisualStyleBackColor = true;
+            this.info.Click += new System.EventHandler(this.info_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 150);
+            this.ClientSize = new System.Drawing.Size(558, 199);
+            this.Controls.Add(this.info);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.necklaceDisplay_txb);
             this.Controls.Add(this.getForTransparency);
@@ -125,5 +138,6 @@ namespace WinFormsApp1
         private System.Windows.Forms.Button getForTransparency;
         private System.Windows.Forms.TextBox necklaceDisplay_txb;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button info;
     }
 }

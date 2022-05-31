@@ -9,7 +9,7 @@ namespace MyClasses
         public int CountOfParticipant { get; set; }
 
 
-        public virtual double Q() => CountOfSpeakers / CountOfParticipant;
+        public virtual double Q() => CountOfSpeakers / Convert.ToDouble(CountOfParticipant);
 
 
         public Meeting(string name, int countSpeakers, int countParticipant) 
@@ -18,5 +18,7 @@ namespace MyClasses
             CountOfSpeakers = countSpeakers;
             CountOfParticipant = countParticipant;
         }
+
+        public Meeting() { }
     }
 }

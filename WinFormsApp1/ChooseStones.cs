@@ -29,16 +29,16 @@ namespace WinFormsApp1
 
         private void ConfirmChoose_btn_Click(object sender, EventArgs e)
         {
-            if (FirstStone_rdbtn.Checked)
-                Value.Add(allStones[0]);
-            if (SecondStone_rdbtn.Checked)
-                Value.Add(allStones[1]);
-            if (ThirdStone_rdbtn.Checked)
-                Value.Add(allStones[2]);
-            if (FourthStone_rdbtn.Checked)
-                Value.Add(allStones[3]);
             if (FifthStone_rdbtn.Checked)
                 Value.Add(allStones[4]);
+            if (FourthStone_rdbtn.Checked)
+                Value.Add(allStones[3]);
+            if (ThirdStone_rdbtn.Checked)
+                Value.Add(allStones[2]);
+            if (SecondStone_rdbtn.Checked)
+                Value.Add(allStones[1]);
+            if (FirstStone_rdbtn.Checked)
+                Value.Add(allStones[0]);
 
             DialogResult = DialogResult.OK;
         }

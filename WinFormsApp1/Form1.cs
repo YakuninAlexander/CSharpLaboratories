@@ -46,7 +46,13 @@ namespace WinFormsApp1
 
         private void sortNecklace_btn_Click(object sender, EventArgs e)
         {
-            necklace.sortStones();
+            var sort = necklace.sortStones();
+            string result = "";
+            foreach(var elem in sort)
+            {
+                result += $"Имя: {elem.Name}, Стоимость: {elem.Price}\n";
+            }
+            MessageBox.Show(result,"Сортированные по стоимости!");
             printStones();
         }
 
@@ -55,7 +61,6 @@ namespace WinFormsApp1
             double totalPrice = necklace.calculateTotalPrice();
             double totalWeight = necklace.calculateTotalWeight();
             MessageBox.Show($"Вес ожерелья: {totalWeight}, Цена ожерелья: {totalPrice}");
-            
         }
 
         private void getForTransparency_Click(object sender, EventArgs e)
@@ -79,6 +84,13 @@ namespace WinFormsApp1
                 MessageBox.Show($"Не был выбран диапазон!");
             }
             diapasone.Dispose();
+        }
+
+        private void info_Click(object sender, EventArgs e)
+        {
+            string s;
+            s = necklace.getInfo();
+            MessageBox.Show(s);
         }
     }
 }

@@ -10,8 +10,8 @@ namespace ThirdLaboratory.Services.Phones
 
     public class Smartphone : MobilePhone
     {
-        public double ScreenSize { get; init; }
-        public ScreenTypes ScreenType { get; init; }
+        public double ScreenSize { get; set; }
+        public ScreenTypes ScreenType { get; set; }
 
         public override IMessage sendMessage(string text, Number number)
         {

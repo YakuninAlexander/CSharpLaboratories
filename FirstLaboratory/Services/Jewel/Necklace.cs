@@ -21,6 +21,17 @@ namespace FirstLaboratory.Services.Jewel
         public IEnumerable<Stone> getStonesByTransparency(int min, int max)
             => Stones.Where(s => s.Transparency <= max && s.Transparency >= min);
 
-        public void sortStones() => Stones.OrderBy(s => s.Price);
+        public IEnumerable<Stone> sortStones() => Stones.OrderByDescending(s => s.Price);
+
+        public string getInfo()
+        {
+            string result = "";
+            foreach(var elem in Stones)
+            {
+                result += $"Имя: {elem.Name}; Прозрачность: {elem.Transparency}; Стоимость: {elem.Price}; Весс: {elem.Weight}!\n";
+            }
+
+            return result;
+        }
     }
 }

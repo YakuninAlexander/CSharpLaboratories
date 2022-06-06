@@ -6,6 +6,5 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\InterfacesAndAbstractClasses\Data.csproj" />
-    <ProjectReference Include="..\..\Domain\Messages\Messages.csproj" />
   </ItemGroup>
 </Project>

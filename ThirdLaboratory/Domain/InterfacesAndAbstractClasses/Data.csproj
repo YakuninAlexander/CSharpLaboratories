@@ -13,10 +13,6 @@
   <ItemGroup>
     <Folder Include="Interfaces\" />
     <Folder Include="AbstractClasses\" />
-    <Folder Include="Classes\" />
     <Folder Include="Enums\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Messages\Messages.csproj" />
   </ItemGroup>
 </Project>

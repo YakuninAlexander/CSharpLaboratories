@@ -1,9 +1,6 @@
 ﻿using System;
-using Messages.Interfaces;
-using Messages;
 using System.Collections.Generic;
 using ThirdLaboratory.Domain.Data.Interfaces;
-using ThirdLaboratory.Domain.Data.Classes;
 using ThirdLaboratory.Domain.Data.Enums;
 
 namespace ThirdLaboratory.Domain.Data.AbstractClasses
@@ -12,25 +9,24 @@ namespace ThirdLaboratory.Domain.Data.AbstractClasses
 
     public abstract class MobilePhone : IPhone
     {
-        public List<Number> PhoneCatalog { get; set; }
+        public MobilePhone(int pixels,int price)
+        {
+            Price = price;
+            CameraPixels = pixels;               
+        }
+
+        public int CameraPixels { get; set; }
         public int Price { get; set; }
 
-        public abstract IMessage sendMessage(string text, Number number);
+        public abstract string sendMessage(string text, string number);
 
         #region IPhone implements
+
         public string OwnNumber { get; set; }
-        public PowerStatus Power { get; set; }
+        public bool Power { get; set; }
+        public void powerSwitch() => Power = !Power;
+        public string call(string number) => $"Вызываем номер {number}";
 
-        public IMessage call(Number number)
-        {
-            IMessage msg = new MessageStream("Вызван номер " + number.Person.Key + "!");
-            return msg;
-        }
-
-        public void powerSwitch()
-        {
-            Power = Power == PowerStatus.On ? PowerStatus.Off : PowerStatus.On;
-        }
         #endregion
     }
 }

@@ -11,7 +11,7 @@ namespace Lab5.Main
     // класс для рисования объектов
     // хранит изборажение и координаты отрисовки
     // хранит коордианыт центра фигуры
-    class ViewObject
+    class DrawingObject
     {
         // коордианты объекта
         // virtual чтобы ViewModel : ViewObject давал коордианты модели
@@ -21,12 +21,12 @@ namespace Lab5.Main
         public Image Image { get; set; }
 
         // по типу модели определим изображение и описание
-        public ViewObject(Image image)
+        public DrawingObject(Image image)
         {
             this.Image = image;
         }
 
-        public ViewObject(Image image, float x, float y)
+        public DrawingObject(Image image, float x, float y)
         {
             this.Image = image;
             X = x;

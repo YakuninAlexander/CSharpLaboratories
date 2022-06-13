@@ -16,16 +16,16 @@ namespace Lab5.Main
     public partial class MainForm : Form
     {
         // список рисуемых объектов
-        List<ViewObject> viewObjects;
+        List<DrawingObject> viewObjects;
         object viewObjectsLocker;
 
-        List<ViewModel> viewModels;
+        List<DrawingModel> viewModels;
         object viewModelsLocker;
 
-        Painter painter;
+        Drawer painter;
 
         // локации
-        ViewObject repairLocation, garage;
+        DrawingObject repairLocation, garage;
 
         // машины и локер
         List<Car> cars;
@@ -57,10 +57,10 @@ namespace Lab5.Main
 
             InitImages();
 
-            viewObjects = new List<ViewObject>();
+            viewObjects = new List<DrawingObject>();
             viewObjectsLocker = new object();
 
-            viewModels = new List<ViewModel>();
+            viewModels = new List<DrawingModel>();
             viewModelsLocker = new object();
 
             cars = new List<Car>();
@@ -120,7 +120,7 @@ namespace Lab5.Main
 
             foreach (var item in viewModels)
             {
-                if (item is ViewModel viewModel)
+                if (item is DrawingModel viewModel)
                     viewModel.Model.IsCanceled = true;
             }
         }
@@ -149,7 +149,7 @@ namespace Lab5.Main
 
             lock(viewModels)
             {
-                viewModels.Add(new ViewModel(newCar, carImage));
+                viewModels.Add(new DrawingModel(newCar, carImage));
             }
 
             // запустим машину
@@ -169,7 +169,7 @@ namespace Lab5.Main
 
             lock (viewModels)
             {
-                viewModels.Add(new ViewModel(newMechanic, carImage));
+                viewModels.Add(new DrawingModel(newMechanic, carImage));
             }
 
             Task.Run(newMechanic.Start);
@@ -193,7 +193,7 @@ namespace Lab5.Main
 
             lock (viewModelsLocker)
             {
-                viewModels.Add(new ViewModel(loader, loaderImage));
+                viewModels.Add(new DrawingModel(loader, loaderImage));
             }
 
             Task.Run(loader.Start);
@@ -223,7 +223,7 @@ namespace Lab5.Main
 
                 cars.Add(newSportsman);
 
-                viewModels.Add(new ViewModel(newSportsman, carImage));
+                viewModels.Add(new DrawingModel(newSportsman, carImage));
 
                 Task.Run(newSportsman.Start);
             }
@@ -248,7 +248,7 @@ namespace Lab5.Main
                     Loader newLoader = Activator.CreateInstance(item, loaderArgs) as Loader;
                     newLoader.Name = "Погрузчик" + i.ToString();
 
-                    viewModels.Add(new ViewModel(newLoader, loaderImage));
+                    viewModels.Add(new DrawingModel(newLoader, loaderImage));
 
                     Task.Run(newLoader.Start);
                 }
@@ -266,7 +266,7 @@ namespace Lab5.Main
 
                 mechanics.Add(newMechanic);
 
-                viewModels.Add(new ViewModel(newMechanic, mechanicImage));
+                viewModels.Add(new DrawingModel(newMechanic, mechanicImage));
 
                 Task.Run(newMechanic.Start);
             }
@@ -278,14 +278,14 @@ namespace Lab5.Main
             addLoaderToolStripMenuItem.Enabled = true;
             startToolStripMenuItem.Enabled = false;
 
-            painter = new Painter(pictureBox, Color.FromArgb(105, 105, 105),
+            painter = new Drawer(pictureBox, Color.FromArgb(105, 105, 105),
                new Font(messageTextBox.Font.FontFamily, 10f, messageTextBox.Font.Style),
                viewObjects, viewObjectsLocker, viewModels, viewModelsLocker);
 
             // create buildings
 
-            repairLocation = new ViewObject(repairLocationImage);
-            garage = new ViewObject(garageImage);
+            repairLocation = new DrawingObject(repairLocationImage);
+            garage = new DrawingObject(garageImage);
 
             SetBuildingsSize();
 
@@ -298,7 +298,7 @@ namespace Lab5.Main
             race = new Race(Message, cars, carsLocker, x, y);
             lock (viewObjectsLocker)
             {
-                viewObjects.Add(new ViewObject(raceImage, x, y));
+                viewObjects.Add(new DrawingObject(raceImage, x, y));
             }
 
             Task.Run(race.Start);

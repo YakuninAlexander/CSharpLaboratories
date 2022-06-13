@@ -8,14 +8,14 @@ using System.Drawing;
 
 namespace Lab5.Main
 {
-    class ViewModel : ViewObject
+    class DrawingModel : DrawingObject
     {
         public Model Model { get; }
 
         public override float X { get => Model.posX; }
         public override float Y { get => Model.posY; }
 
-        public ViewModel(Model model, Image image)
+        public DrawingModel(Model model, Image image)
             : base(image)
         {
             this.Model = model;

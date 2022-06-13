@@ -9,16 +9,16 @@ using Lab5.Models;
 
 namespace Lab5.Main
 {
-    class Painter
+    class Drawer
     {
         private readonly PictureBox pictureBox;
 
         Bitmap bitmap;
 
-        List<ViewObject> viewObjects;
+        List<DrawingObject> viewObjects;
         private readonly object viewObjectsLocker;
 
-        private readonly List<ViewModel> viewModels;
+        private readonly List<DrawingModel> viewModels;
         private readonly object viewModelsLocker;
 
         private readonly Graphics graphics;
@@ -27,9 +27,9 @@ namespace Lab5.Main
         
         Timer timer;
 
-        public Painter(PictureBox pictureBox, Color backgroundColor, Font textFont,
-            List<ViewObject> viewObjects, object viewObjectsLocker,
-            List<ViewModel> viewModels, object viewModelsLocker)
+        public Drawer(PictureBox pictureBox, Color backgroundColor, Font textFont,
+            List<DrawingObject> viewObjects, object viewObjectsLocker,
+            List<DrawingModel> viewModels, object viewModelsLocker)
         {
             this.pictureBox = pictureBox;
             this.viewObjects = viewObjects;
@@ -69,7 +69,7 @@ namespace Lab5.Main
             });
         }
 
-        void Draw(ViewObject viewObject)
+        void Draw(DrawingObject viewObject)
         {
 
             graphics.DrawImage(viewObject.Image,

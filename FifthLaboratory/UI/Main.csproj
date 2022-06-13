@@ -58,7 +58,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Painter.cs" />
+    <Compile Include="Drawer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SelectLoaderType.cs">
@@ -67,8 +67,8 @@
     <Compile Include="SelectLoaderType.Designer.cs">
       <DependentUpon>SelectLoaderType.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel.cs" />
-    <Compile Include="ViewObject.cs" />
+    <Compile Include="DrawingModel.cs" />
+    <Compile Include="DrawingObject.cs" />
     <EmbeddedResource Include="Input.resx">
       <DependentUpon>Input.cs</DependentUpon>
     </EmbeddedResource>
